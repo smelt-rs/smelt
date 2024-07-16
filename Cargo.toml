@@ -2,7 +2,7 @@
 resolver = "2"
 
 [workspace.package]
-repository = "REPOSITORY"
+repository = "https://github.com/smelt-rs/smelt"
 license = "MIT OR Apache-2.0"
 edition = "2021"
 rust-version = "1.65.0"  # MSRV
@@ -85,9 +85,9 @@ wildcard_imports = "warn"
 zero_sized_map_values = "warn"
 
 [package]
-name = "PROJECT"
+name = "smelt"
 version = "0.0.1"
-description = "DESCRIPTION"
+description = "Prototype metabuild tool"
 categories = []
 keywords = []
 repository.workspace = true
@@ -106,7 +106,7 @@ pre-release-replacements = [
   {file="CHANGELOG.md", search="\\.\\.\\.HEAD", replace="...{{tag_name}}", exactly=1},
   {file="CHANGELOG.md", search="ReleaseDate", replace="{{date}}", min=1},
   {file="CHANGELOG.md", search="<!-- next-header -->", replace="<!-- next-header -->\n## [Unreleased] - ReleaseDate\n", exactly=1},
-  {file="CHANGELOG.md", search="<!-- next-url -->", replace="<!-- next-url -->\n[Unreleased]: https://github.com/ORG/PROJECT/compare/{{tag_name}}...HEAD", exactly=1},
+  {file="CHANGELOG.md", search="<!-- next-url -->", replace="<!-- next-url -->\n[Unreleased]: https://github.com/smelt-rs/smelt/compare/{{tag_name}}...HEAD", exactly=1},
 ]
 
 [features]
